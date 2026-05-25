@@ -23,7 +23,7 @@
 
 ### Страница 1. Формула ψ
 
-![Формула 1](/Images/img1.png)
+![Формула 1](https://github.com/leenoleumm/PR4Sodhi/blob/master/Практическая%20работа%204%20Соди/Images/img1.png)
 
 **Входные данные:** x, y, z
 
@@ -31,7 +31,7 @@
 
 ### Страница 2. Условная функция l с выбором f(x)
 
-![Формула 2](/Images/img2.png)
+![Формула 2](https://github.com/leenoleumm/PR4Sodhi/blob/master/Практическая%20работа%204%20Соди/Images/img2.png)
 
 **Входные данные:** x, p  
 **Выбор f(x):** sh(x), x², eˣ
@@ -40,7 +40,7 @@
 
 ### Страница 3. Табуляция и график y(x)
 
-![Формула 3](/Images/img3.png)
+![Формула 3](https://github.com/leenoleumm/PR4Sodhi/blob/master/Практическая%20работа%204%20Соди/Images/img3.png)
 
 ### Навигация
 - Главное окно содержит Frame и панель с тремя кнопками
