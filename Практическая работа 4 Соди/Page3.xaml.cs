@@ -7,6 +7,9 @@ using LiveCharts.Wpf;
 
 namespace Практическая_работа_4_Соди
 {
+    /// <summary>
+    /// страница 3 для табуляции и построения графика функции y(x)
+    /// </summary>
     public partial class Page3 : Page
     {
         public Page3()
@@ -14,6 +17,12 @@ namespace Практическая_работа_4_Соди
             InitializeComponent();
         }
 
+        /// <summary>
+        /// обрабатывает нажатие кнопки вычислить
+        /// выполняет табуляцию функции и строит график
+        /// </summary>
+        /// <param name="sender">отправитель события</param>
+        /// <param name="e">параметры события</param>
         private void BtnCalc_Click(object sender, RoutedEventArgs e)
         {
             if (!double.TryParse(txtX0.Text, out double x0) ||
@@ -57,6 +66,12 @@ namespace Практическая_работа_4_Соди
             lineSeries.Values = yValues;
         }
 
+        /// <summary>
+        /// вычисляет y по формуле
+        /// </summary>
+        /// <param name="x">значение x</param>
+        /// <param name="b">значение b</param>
+        /// <returns>результат вычисления y или NaN при делении на ноль</returns>
         private double CalculateY(double x, double b)
         {
             double numerator = Math.Pow(Math.Abs(x - b), 2);
@@ -73,6 +88,11 @@ namespace Практическая_работа_4_Соди
             return term1 + term2;
         }
 
+        /// <summary>
+        /// очищает все поля ввода и вывода, удаляет график
+        /// </summary>
+        /// <param name="sender">отправитель события</param>
+        /// <param name="e">параметры события</param>
         private void BtnClear_Click(object sender, RoutedEventArgs e)
         {
             txtX0.Clear();

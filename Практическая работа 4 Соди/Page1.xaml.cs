@@ -4,6 +4,9 @@ using System.Windows.Controls;
 
 namespace Практическая_работа_4_Соди
 {
+    /// <summary>
+    /// страница 1 для расчёта функции psi
+    /// </summary>
     public partial class Page1 : Page
     {
         public Page1()
@@ -11,6 +14,11 @@ namespace Практическая_работа_4_Соди
             InitializeComponent();
         }
 
+        /// <summary>
+        /// обрабатывает нажатие кнопки вычислить
+        /// </summary>
+        /// <param name="sender">отправитель события</param>
+        /// <param name="e">параметры события</param>
         private void BtnCalc_Click(object sender, RoutedEventArgs e)
         {
             if (!double.TryParse(txtX.Text, out double x) ||
@@ -31,6 +39,13 @@ namespace Практическая_работа_4_Соди
             txtResult.Text = psi.ToString("F6");
         }
 
+        /// <summary>
+        /// вычисляет psi по формуле
+        /// </summary>
+        /// <param name="x">значение x</param>
+        /// <param name="y">значение y</param>
+        /// <param name="z">значение z</param>
+        /// <returns>результат вычисления psi</returns>
         private double CalculatePsi(double x, double y, double z)
         {
             double term1 = Math.Abs(Math.Pow(x, y / x) - Math.Pow(y, 1.0 / 3.0));
@@ -39,6 +54,11 @@ namespace Практическая_работа_4_Соди
             return term1 + term2;
         }
 
+        /// <summary>
+        /// очищает все поля ввода и вывода
+        /// </summary>
+        /// <param name="sender">отправитель события</param>
+        /// <param name="e">параметры события</param>
         private void BtnClear_Click(object sender, RoutedEventArgs e)
         {
             txtX.Clear();
